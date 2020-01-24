@@ -17,10 +17,10 @@ class UserProfileManager(BaseUserManager):
         user.set_password(password)
         user.save(using=self._db)
 
-        return User
+        return user
 
 
-    def create_spuer_user(self, email, name, password):
+    def create_superuser(self, email, name, password):
         """ create super user with given details"""
         user =self.create_user(email, name, password)
 
