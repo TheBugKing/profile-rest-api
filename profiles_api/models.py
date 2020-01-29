@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser
 from django.contrib.auth.models import PermissionsMixin
@@ -55,7 +55,7 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
     def __str__(self):
         """ return string representation of our user"""
         return self.email
-=======
+
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser
 from django.contrib.auth.models import PermissionsMixin
@@ -109,4 +109,3 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
     def __str__(self):
         """ return string representation of our user"""
         return self.email
->>>>>>> 44d2da5cd617de6cc7f786ba0b7076c671cbbce6
