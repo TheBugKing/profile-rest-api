@@ -2,6 +2,7 @@ from django.shortcuts import render
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
+from rest_framework import viewsets
 
 from profiles_api import serializers
 
@@ -51,3 +52,16 @@ class HelloApiView(APIView):
     def delete(self, request, pk=None):
         """Delete an object"""
         return Response({'method': 'DELETE'})
+
+
+
+class HelloViewSets(viewsets.ViewSet):
+    """ defining viewset class of our operations """
+
+    def list(self, request):
+        """ retive list of object for now display list"""
+        an_viewset = ["this is a Viewset",
+         "lets try the basics",
+         "ok end",
+         ]
+        return Response({'message':'Hello Viewsets', 'list': an_viewset})
